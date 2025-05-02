@@ -11,15 +11,15 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
-from dotenv import load_dotenv
 import os
+from dotenv import load_dotenv
 import dj_database_url
+
+# Define BASE_DIR first
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Load environment variables from a .env file
 load_dotenv(BASE_DIR / '.env')
-
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 # Quick-start development settings - unsuitable for production
